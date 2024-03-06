@@ -1,7 +1,7 @@
 # Project Title: LifeForce 2D
 ## Blast through waves of enemies in this retro-inspired 2D side-scrolling shooter!
 ![Life Force](https://github.com/banyapon/LifeForce2D/blob/main/Sprites/Tileset/cover.jpg)
-LifeForce 2D is a classic-style side-scrolling shooter game built with the Godot Engine (version 4.2.1). Channel the energy of titles like Gradius and R-Type as you pilot your ship through challenging levels, upgrade your firepower, and face epic boss battles.
+LifeForce 2D is a classic-style side-scrolling shooter game built with the Godot Engine (version 4.2.1). Channel the energy of titles like Contra and Shoot Em Up through challenging levels, upgrade your firepower, and face epic boss battles.
 
 ### Getting Started
 Download: Clone or download the project from this GitHub repository.
