@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://djcowy2evjr2w"]
+
+[node name="CanvasGroup" type="CanvasGroup"]
+z_index = 3

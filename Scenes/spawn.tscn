@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1ch40f583onb"]
+
+[sub_resource type="GDScript" id="GDScript_pfu7r"]
+script/source = "extends Node2D
+
+@export var isSpawn := false
+var enemy_prefab = preload(\"res://Scenes/enemy.tscn\") # Path to your prefab
+
+func _ready():
+	pass
+	
+func _process(delta):
+	if !isSpawn:
+		isSpawn = true
+		var timer_count = randf_range(1.0, 5.0)
+		await get_tree().create_timer(timer_count).timeout
+		_spawn_enemy()
+		isSpawn = false
+	pass
+
+func _spawn_enemy():
+	var enemy_instance = enemy_prefab.instantiate()
+	var spawn_position = get_random_spawn_position()
+	enemy_instance.global_position = spawn_position
+	get_parent().add_child(enemy_instance)
+
+func get_random_spawn_position():
+	var screen_size = get_viewport_rect().size 
+	var random_position = Vector2(randf_range(0, screen_size.x),randf_range(0, 0.5))
+	#print(random_position.x)
+	return random_position 
+"
+
+[node name="Spawn" type="Node2D"]
+script = SubResource("GDScript_pfu7r")
